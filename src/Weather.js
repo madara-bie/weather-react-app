@@ -70,7 +70,7 @@ export default function Weather(props) {
               <p className="main-degree">{temperature}°C</p>
             </strong>
             <span className="units">
-              <a href="#">°C</a> |<a href="#">°F</a>
+              <a href="javascript:">°C</a> |<a href="javascript:">°F</a>
             </span>
             <button className="btn btn-primary current-button">
               Show current location
