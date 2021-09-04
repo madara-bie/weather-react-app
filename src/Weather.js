@@ -54,8 +54,12 @@ export default function Weather(props) {
   }
 
   useEffect(() => {
-    getTemperature(selectedCity);
-    setDate(updateCurrentTime());
+    function doDefault() {
+      getTemperature(selectedCity);
+      setDate(updateCurrentTime());
+    };
+
+    doDefault();
   });
 
   return (
@@ -70,7 +74,7 @@ export default function Weather(props) {
               <p className="main-degree">{temperature}°C</p>
             </strong>
             <span className="units">
-              <a href="javascript:">°C</a> |<a href="javascript:">°F</a>
+              <a href="/#">°C</a> |<a href="/#">°F</a>
             </span>
             <button className="btn btn-primary current-button">
               Show current location
@@ -93,7 +97,7 @@ export default function Weather(props) {
         </div>
       </div>
       <div className="git-hub">
-        <a href="https://github.com/madara-bie/weather-react-app" target="_blank">
+        <a href="https://github.com/madara-bie/weather-react-app" target="_blank" rel="noreferrer">
           Open a source code by Madara Biezā
         </a>
       </div>
