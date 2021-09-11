@@ -3,6 +3,7 @@ import "./App.css";
 import "./Weather.css";
 import axios from "axios";
 import Search from "./Search.js";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function Weather(props) {
   let [selectedCity, setSelectedCity] = useState(props.defaultCity);
@@ -71,13 +72,13 @@ export default function Weather(props) {
             <img src={imgUrl} alt={description} className="main-icon" />
             <br />
             <strong>
-              <p className="main-degree">{temperature}°C</p>
+              <div className="main-degree">
+              <WeatherTemperature celsius={temperature}/>
+              </div>
             </strong>
-            <span className="units">
-              <a href="/#">°C</a> |<a href="/#">°F</a>
-            </span>
-            <button className="btn btn-primary current-button">
-              Show current location
+
+            <button className="current-button">
+              <p className="current-btn-p">Show current location</p>
             </button>
           </h1>
         </div>

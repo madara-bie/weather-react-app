@@ -34,33 +34,17 @@ h1 {
   padding-top: 10px;
 }
 
-h1 .current-button,
-h1 .current-button:hover {
+h1 .current-button {
   background-color: transparent;
   color: rgb(110, 110, 110);
   border: none;
-  display: flex;
-  float: left;
-  margin-left: 50px;
 }
-h1 .current-button:hover {
-  font-size: 1.05rem;
-  color: rgb(110, 110, 110);
-  font-weight: 500;
-  transition: all 0.2s ease;
-  margin-left: 48px;
-  background-color: transparent;
-}
-h1 .current-button:active,
-h1 button:active {
-  background-color: transparent !important;
-  font-size: 1.05rem;
-  color: rgb(184, 184, 184);
-  border-color: transparent;
+.current-btn-p {
+  font-size: 20px;
 }
 
 .main-icon {
-  width: 200px;
+  width: 180px;
   height: auto;
 }
 .location,
@@ -69,14 +53,9 @@ h1 button:active {
 }
 .main-degree {
   margin-bottom: 3px;
-  font-size: 50px;
+  font-size: 55px;
 }
-.units a {
-  font-size: 25px;
-  text-decoration: none;
-  font-weight: 300;
-  color: rgb(110, 110, 110);
-}
+
 .location {
   font-size: 40px;
   margin-bottom: 0px;
@@ -133,8 +112,8 @@ form {
   width: 35%;
 }
 button {
-  display: flex;
-  float: right;
+  display: block;
+  margin: 0 auto;
 }
 .extra-info p {
   margin-top: 0;
@@ -153,6 +132,9 @@ button {
   display: block;
 }
 
+.git-hub {
+  margin-top: 200px;
+}
 .git-hub a {
   text-decoration: none;
   color: rgb(110, 110, 110);
