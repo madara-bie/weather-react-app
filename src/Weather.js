@@ -95,9 +95,7 @@ export default function Weather(props) {
             <p className="windSpeed">Wind speed: {windSpeed} km/h</p>
             <p className="precipitation">Precipitation: {presipitation}%</p>
           </div>
-          <div className="weatherForecast">
             <WeatherForecast/>
-          </div>
         </div>
       </div>
       <div className="git-hub">
