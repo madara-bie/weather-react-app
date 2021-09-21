@@ -4,6 +4,7 @@ import "./Weather.css";
 import axios from "axios";
 import Search from "./Search.js";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast.js";
 
 export default function Weather(props) {
   let [selectedCity, setSelectedCity] = useState(props.defaultCity);
@@ -94,7 +95,9 @@ export default function Weather(props) {
             <p className="windSpeed">Wind speed: {windSpeed} km/h</p>
             <p className="precipitation">Precipitation: {presipitation}%</p>
           </div>
-          <div className="weatherForecast"></div>
+          <div className="weatherForecast">
+            <WeatherForecast/>
+          </div>
         </div>
       </div>
       <div className="git-hub">
