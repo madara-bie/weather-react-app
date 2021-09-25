@@ -94,7 +94,7 @@ export default function Weather(props) {
         </div>
         <div className="git-hub">
           <a href="https://github.com/madara-bie/weather-react-app" target="_blank" rel="noreferrer">
-            Open a source code created by Madara Biezā
+            Open the source code created by Madara Biezā
           </a>
         </div>
       </div>
