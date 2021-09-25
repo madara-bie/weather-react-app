@@ -19,7 +19,6 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       date: getCurrentTime(),
       description: response.data.weather[0].description,
-      //icon: response.data.weather[0].icon + '.png',
       icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
       city: response.data.name,
