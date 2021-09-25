@@ -11,24 +11,12 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function showTemperature(response) {
-    /*setWeatherData({
-      ready: true,
-      coordinates: '{"lon": -122.08, "lat": 37.39}',
-      temperature: Math.round(282.55),
-      humidity: 100,
-      date: getCurrentTime(),
-      description: "clear sky",
-      icon: '01d.png',
-      wind: "1.5",
-      city: "Malmo"
-    });*/
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
       temperature: Math.round(response.data.main.temp),
       humidity: response.data.main.humidity,
       date: getCurrentTime(),
-      //date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon + '.png',
       wind: response.data.wind.speed,
@@ -60,8 +48,6 @@ export default function Weather(props) {
   }
 
   function getTemperature(city) {
-    //const response = null;
-    //showTemperature(response);
     const apiKey = "d547f7175aa4839fd00918dad2121b28";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(showTemperature);
