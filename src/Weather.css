@@ -66,6 +66,7 @@ h1 .current-button {
   font-weight: 300;
 }
 
+/*
 .small-icons {
   height: 80px;
 }
@@ -92,6 +93,7 @@ h1 .current-button {
   font-size: 19px;
   color: rgba(147, 156, 170, 0.521);
 }
+
 .col-2 {
   margin: 5px 5px 10px auto;
   display: inline-block;
@@ -101,6 +103,7 @@ h1 .current-button {
   box-shadow: rgba(168, 168, 168, 0.08) 0px 8px 8px 0;
   width: 120px;
 }
+*/
 
 .col-2-3 form {
   display: block;

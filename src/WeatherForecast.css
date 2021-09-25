@@ -1,0 +1,36 @@
+.small-icons {
+  height: 80px;
+}
+
+.col-2 {
+  margin: 5px 5px 10px auto;
+  display: inline-block;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.205);
+  border-radius: 10px;
+  box-shadow: rgba(168, 168, 168, 0.08) 0px 8px 8px 0;
+  width: 125px;
+}
+
+.WeatherForecast {
+  display: block;
+  margin: 40px auto 30px auto;
+  text-align: center;
+}
+.WeatherForecast-day {
+  margin: 5px auto 10px auto;
+  font-size: 20px;
+}
+
+.WeatherForecast-temperature {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.WeatherForecast-temperature-max {
+  font-size: 20px;
+}
+.WeatherForecast-temperature-min {
+  font-size: 19px;
+  color: rgba(147, 156, 170, 0.521);
+}
