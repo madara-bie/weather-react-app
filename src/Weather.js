@@ -5,6 +5,7 @@ import axios from "axios";
 import Search from "./Search.js";
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherForecast from "./WeatherForecast.js";
+import WeatherIcon from "./WeatherIcon.js";
 
 export default function Weather(props) {
   let [selectedCity, setSelectedCity] = useState(props.defaultCity);
@@ -18,7 +19,8 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       date: getCurrentTime(),
       description: response.data.weather[0].description,
-      icon: response.data.weather[0].icon + '.png',
+      //icon: response.data.weather[0].icon + '.png',
+      icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
       city: response.data.name,
     });
@@ -65,17 +67,15 @@ export default function Weather(props) {
           <div className="col-1-3">
             <h1>
               Weather in <p className="location">{weatherData.city}</p>
-              <img src={weatherData.icon} alt={weatherData.description} className="main-icon" />
+              <div className="main-icon">
+                <WeatherIcon code={weatherData.icon}/>
+              </div>
               <br />
               <strong>
                 <div className="main-degree">
                 <WeatherTemperature celsius={weatherData.temperature}/>
                 </div>
               </strong>
-
-              <button className="current-button">
-                <p className="current-btn-p">Show current location</p>
-              </button>
             </h1>
           </div>
         </div>
@@ -86,7 +86,7 @@ export default function Weather(props) {
             </div>
             <div className="extraInfo">
               <p className="currentTime">{weatherData.date}</p>
-              <p className="weatherDescription">Currently: {weatherData.description}</p>
+              <p className="weatherDescription text-capitalize">Currently: {weatherData.description} </p>
               <p className="windSpeed">Wind speed: {weatherData.wind} km/h</p>
               <p className="precipitation">Precipitation: {weatherData.humidity}%</p>
             </div>

@@ -3,7 +3,7 @@
 }
 
 .col-2 {
-  margin: 5px 5px 10px auto;
+  margin: 5px 5px 10px 0;
   display: inline-block;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.205);
@@ -32,5 +32,5 @@
 }
 .WeatherForecast-temperature-min {
   font-size: 19px;
-  color: rgba(147, 156, 170, 0.521);
+  color: rgba(125, 132, 145, 0.521);
 }
